@@ -40,15 +40,6 @@ public class PlayerMovement : MonoBehaviour
         transform.position = temp;
     }
 
-    void OnTriggerEnter2D(Collider2D target)
-    {
-        if(target.tag == "Enemy") 
-        {
-            GameManager.instance.PlayerDied();
-
-        }
-    }
-
 
 
 }
