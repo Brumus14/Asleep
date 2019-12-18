@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class playerCollision : MonoBehaviour
 {
+
+    public Sprite playerDead;
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Hit detected");
         Time.timeScale = 0f;
+        this.gameObject.GetComponent<SpriteRenderer>().sprite = playerDead;
     }
 }
